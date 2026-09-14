@@ -404,13 +404,13 @@ shareLinkBtn?.addEventListener(
 
 
 leaveRoomBtn?.addEventListener("click", async () => {
-    const confirmed = confirm(
-        "Are you sure you want to leave this room?"
-    );
+    // const confirmed = confirm(
+    //     "Are you sure you want to leave this room?"
+    // );
 
-    if (!confirmed) {
-        return;
-    }
+    // if (!confirmed) {
+    //     return;
+    // }
 
     try {
         leaveRoomBtn.disabled = true;

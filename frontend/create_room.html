@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BidHouse — Create Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/create-room.css">
+
+</head>
+<body>
+
+  <div class="page">
+
+    <a href="home.html" class="back-link">&#8592; Back</a>
+
+    <!-- Submits to /api/room/createroom. A plain HTML form submit like this
+         works with zero JS as long as the backend responds with a redirect
+         (302) to room-lobby.html?code=<ROOMCODE> once the room is created.
+         If you'd rather do this via fetch() instead (e.g. to show inline
+         validation errors), create-room.js can intercept submit, POST the
+         same fields, then do window.location.href = `room-lobby.html?code=${roomCode}`. -->
+    <main class="view">
+      <form class="settings-card" id="createRoomForm" action="/api/rooms/createroom" method="POST" novalidate>
+
+        <div class="card-head">
+          <span class="card-head__icon">&#128296;</span>
+          <h1>Create Auction Room</h1>
+          <p>Set the rules, then invite your friends in.</p>
+        </div>
+
+        <!-- Room type -->
+        <div class="field-group">
+          <label class="field-group__label">Room Type</label>
+
+          <input type="radio" name="room_type" id="room-type-public" class="chip-input" value="public" checked>
+          <input type="radio" name="room_type" id="room-type-private" class="chip-input" value="private">
+
+          <div class="room-type-grid">
+            <label for="room-type-public" class="room-type-card">
+              <span class="room-type-card__icon">&#127760;</span>
+              <span class="room-type-card__label">Public</span>
+              <span class="room-type-card__desc">Anyone with the link can join</span>
+            </label>
+            <label for="room-type-private" class="room-type-card">
+              <span class="room-type-card__icon">&#128274;</span>
+              <span class="room-type-card__label">Private</span>
+              <span class="room-type-card__desc">Invite-only, code required</span>
+            </label>
+          </div>
+
+          <!-- Only shown for Private -->
+          <p class="private-note">Private rooms use standard default settings — you'll be able to tweak them once your friends are in.</p>
+
+          <!-- Only shown for Public -->
+          <div class="settings-extra">
+
+            <div class="field-group">
+              <label class="field-group__label" for="maxPlayers">Maximum Players</label>
+              <div class="select-wrap">
+                <select id="maxPlayers" name="max_players">
+                  <option value="2">2</option>
+                  <option value="4" selected>4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                </select>
+                <span class="select-wrap__chevron">&#9662;</span>
+              </div>
+            </div>
+
+            <div class="field-group">
+                <label class="field-group__label">Starting Purse</label>
+                
+                <!-- Inputs MUST be placed exactly here as siblings to .chip-row for your CSS rules to target them -->
+                <input type="radio" name="starting_purse" id="purse-20cr" class="chip-input" value="20cr">
+                <input type="radio" name="starting_purse" id="purse-50cr" class="chip-input" value="50Cr">
+                <input type="radio" name="starting_purse" id="purse-75cr" class="chip-input" value="75Cr">
+                <input type="radio" name="starting_purse" id="purse-100cr" class="chip-input" value="100Cr" checked>
+                <input type="radio" name="starting_purse" id="purse-150cr" class="chip-input" value="150Cr">
+                <input type="radio" name="starting_purse" id="purse-200cr" class="chip-input" value="200Cr">
+                
+                <div class="chip-row">
+                    <label for="purse-20cr" class="chip">₹20 cr</label>
+                    <label for="purse-50cr" class="chip">₹50 Cr</label>
+                    <!-- Note: Make sure you add IDs to your CSS if you introduce new options like 75cr -->
+                    <label for="purse-75cr" class="chip">₹75 Cr</label> 
+                    <label for="purse-100cr" class="chip">₹100 Cr</label>
+                    <label for="purse-150cr" class="chip">₹150 Cr</label>
+                    <label for="purse-200cr" class="chip">₹200 Cr</label>
+                </div>
+            </div>
+
+
+
+            <div class="field-group">
+              <label class="field-group__label">Timer Per Player</label>
+              <input type="radio" name="timer_seconds" id="timer-15" class="chip-input" value="15">
+              <input type="radio" name="timer_seconds" id="timer-30" class="chip-input" value="30" checked>
+              <input type="radio" name="timer_seconds" id="timer-45" class="chip-input" value="45">
+              <input type="radio" name="timer_seconds" id="timer-60" class="chip-input" value="60">
+              <div class="chip-row">
+                <label for="timer-15" class="chip">15 sec</label>
+                <label for="timer-30" class="chip">30 sec</label>
+                <label for="timer-45" class="chip">45 sec</label>
+                <label for="timer-60" class="chip">60 sec</label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-group__label">Last-Second Extension</label>
+              <input type="radio" name="extension_seconds" id="ext-0" class="chip-input" value="0">
+              <input type="radio" name="extension_seconds" id="ext-3" class="chip-input" value="3">
+              <input type="radio" name="extension_seconds" id="ext-5" class="chip-input" value="5" checked>
+              <input type="radio" name="extension_seconds" id="ext-10" class="chip-input" value="10">
+              <div class="chip-row">
+                <label for="ext-0" class="chip">None</label>
+                <label for="ext-3" class="chip">+3 sec</label>
+                <label for="ext-5" class="chip">+5 sec</label>
+                <label for="ext-10" class="chip">+10 sec</label>
+              </div>
+            </div>
+
+            <!-- Small bonus options — visual only, not wired to any backend yet -->
+            <details class="advanced">
+              <summary>Advanced options</summary>
+
+              <label class="switch-row">
+                <span>Allow spectators</span>
+                <span class="switch">
+                  <input type="checkbox" name="allow_spectators">
+                  <span class="switch__track"><span class="switch__thumb"></span></span>
+                </span>
+              </label>
+
+              <label class="switch-row">
+                <span>Auto-start when room is full</span>
+                <span class="switch">
+                  <input type="checkbox" name="auto_start" checked>
+                  <span class="switch__track"><span class="switch__thumb"></span></span>
+                </span>
+              </label>
+            </details>
+
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Create Room</button>
+      </form>
+    </main>
+
+  </div>
+  <script src="./js/create_room.js" ></script>
+</body>
+</html>

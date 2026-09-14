@@ -536,6 +536,11 @@ a { text-decoration: none; }
   color: var(--ink-300);
 }
 
+.fa-solid{
+    font-size: large;
+    color: rgba(216, 180, 92, 0.55);
+}
+
 /* ============ RESPONSIVE ============ */
 
 @media (max-width: 640px) {

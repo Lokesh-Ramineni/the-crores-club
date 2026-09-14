@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BidHouse — Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/home.css">
+<script src="./js/home.js"></script>
+</head>
+<body>
+
+  <!-- Theme toggle checkbox (pure CSS, no JS needed to switch theme) -->
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+  <!-- Settings dropdown checkbox (pure CSS popover) -->
+  <input type="checkbox" id="settings-toggle" class="settings-toggle-input">
+
+  <div class="page-wrap">
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar">
+      <div class="navbar__brand">
+        <span class="navbar__icon">&#127923;</span>
+        <span class="navbar__title">AUCTION XI</span>
+      </div>
+
+      <div class="navbar__right">
+
+        <!-- Theme switch -->
+        <label for="theme-toggle" class="theme-switch" title="Toggle theme">
+          <span class="theme-switch__track">
+            <span class="theme-switch__thumb">
+              <span class="theme-switch__icon theme-switch__icon--sun">&#9728;</span>
+              <span class="theme-switch__icon theme-switch__icon--moon">&#9789;</span>
+            </span>
+          </span>
+        </label>
+
+        <!-- User pill -->
+        <div class="user-pill">
+          <span class="user-pill__avatar" id="userAvatarInitial"></span>
+          <!-- Username populated by home.js from backend session response -->
+          <span class="user-pill__name" id="userName"></span>
+        </div>
+
+        <!-- Settings -->
+        <div class="settings">
+          <label for="settings-toggle" class="settings__trigger" title="Settings">&#9881;</label>
+
+          <div class="settings__menu">
+            <div class="settings__menu-header">
+              <span class="user-pill__avatar user-pill__avatar--lg"></span>
+              <span id="userNameMenu"></span>
+            </div>
+            <a href="#" class="settings__item">
+              <span class="settings__item-icon">&#9998;</span> Edit Username
+            </a>
+            <a href="#" class="settings__item settings__item--danger" onclick="logout(); return false;"> 
+              <span class="settings__item-icon"  >&#8618;</span> Logout
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <main class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <svg class="hero__seam" viewBox="0 0 500 500" aria-hidden="true">
+        <circle cx="250" cy="250" r="220" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+      </svg>
+
+      <span class="hero__eyebrow">&#127943; Season 2026</span>
+      <h1 class="hero__title">IPL AUCTION</h1>
+      <p class="hero__tagline">Build. Bid. Dominate.</p>
+      <p class="hero__desc">Create an auction room and challenge your friends<br>for the ultimate dream squad.</p>
+
+      <!-- home.js should wire these two up:
+           #createRoomBtn  -> navigate to create-room.html
+                              (or POST straight to /api/room/createroom if you want
+                               to skip the settings page and use defaults)
+           #joinRoomBtn    -> open a "enter room code" prompt/modal, then
+                              navigate to room-lobby.html?code=<CODE> once the
+                              backend confirms the code is valid -->
+      <div class="hero__actions">
+        <button type="button" class="btn-action btn-action--primary" id="createRoomBtn" onclick="window.location.href='create_room.html'">
+          <span class="btn-action__icon">&#128296;</span>
+          Create Room
+          <span class="live-dot" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-action btn-action--secondary" id="joinRoomBtn" onclick="window.location.href='join_room.html'">
+          <span class="btn-action__icon">&#127918;</span>
+          Join Room
+        </button>
+      </div>
+    </main>
+
+    <!-- ============ YOU CARD ============ -->
+    <section class="you-section">
+      <div class="you-card">
+        <span class="you-card__label">&#128100; YOU</span>
+        <h2 class="you-card__name" id="userNameCard"></h2>
+        <div class="you-card__rule"></div>
+        <p class="you-card__line">Ready to build your squad?</p>
+      </div>
+    </section>
+
+    <!-- ============ HOW TO PLAY ============ -->
+    <section class="how-section">
+      <h3 class="how-section__title"><span>&#9889;</span> How to Play</h3>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step__num">01</span>
+          <span class="step__label">Create<br>Room</span>
+        </div>
+        <span class="step__connector" aria-hidden="true"></span>
+        <div class="step">
+          <span class="step__num">02</span>
+          <span class="step__label">Invite<br>Friends</span>
+        </div>
+        <span class="step__connector" aria-hidden="true"></span>
+        <div class="step">
+          <span class="step__num">03</span>
+          <span class="step__label">Bid<br>&amp; Win</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 BidHouse — built for auction night.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

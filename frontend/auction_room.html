@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BidHouse — Live Auction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/auction-room.css">
+</head>
+<body>
+
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+  <script src="./js/theme.js"></script>
+
+  <div class="page">
+
+    <header class="topbar">
+      <span class="round-info">Round <span id="roundCurrent"></span> of <span id="roundTotal">320</span></span>
+
+
+      <div class="host-controls" id="hostControls">
+        <button type="button" class="btn-ghost" id="forceSkipBtn">
+          <span class="btn-ghost__icon">&#9654;&#65039;</span> Force Skip
+        </button>
+        <button type="button" class="btn-ghost" id="pauseBtn">
+          <span class="btn-ghost__icon">&#9208;&#65039;</span> Pause
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ CURRENT PLAYER CARD ============ -->
+    <main class="auction-card">
+
+      <div class="player-row">
+        <span class="player-avatar" id="playerAvatar"></span>
+
+        <div class="player-info">
+          <div class="player-name-row">
+            <h1 class="player-name" id="playerName"></h1>
+            <span class="tag" id="playerTag"></span>
+          </div>
+          <p class="player-meta"><span id="playerRole"></span> &bull; Base <span id="playerBase"></span></p>
+        </div>
+
+        <div class="timer-box">
+          <span class="timer-label">Time left</span>
+          <span class="timer-value" id="timerValue"></span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="bid-row">
+        <span class="bid-label">Current bid</span>
+        <span class="bid-value">
+          <span id="currentBid">4.5 cr</span>
+          <span class="bid-by">&mdash; <span id="currentBidder"></span></span>
+        </span>
+      </div>
+
+      <!-- auction.js shows this only when the viewer isn't the current highest bidder -->
+      <div class="alert alert--warning" id="outbidAlert">
+        <span class="alert__icon">&#9888;</span> You've been outbid
+      </div>
+
+      <div class="bid-actions">
+        <button type="button" class="bid-btn" data-increment="0.5">+0.5 cr</button>
+        <button type="button" class="bid-btn" data-increment="1">+1 cr</button>
+        <button type="button" class="bid-btn" data-increment="2">+2 cr</button>
+        <button type="button" class="bid-btn bid-btn--pass" id="passBtn">Pass</button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-label">Your purse</span>
+          <span class="stat-value" id="yourPurse"></span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Squad</span>
+          <span class="stat-value" id="squadCount"></span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">Players left</span>
+          <span class="stat-value" id="playersLeft"></span>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============ OTHER PLAYERS ============ -->
+    <section class="other-players">
+      <h3 class="other-players__title">Other players</h3>
+
+      <div class="other-players__list" id="otherPlayersList">
+        <div class="player-chip player-chip--active">
+          <span class="player-chip__name"></span>
+          <span class="player-chip__value"></span>
+        </div>
+        <div class="player-chip player-chip--passed">
+          <span class="player-chip__name"></span>
+          <span class="player-chip__value"></span>
+        </div>
+        <div class="player-chip">
+          <span class="player-chip__name"></span>
+          <span class="player-chip__value"></span>
+        </div>
+        <div class="player-chip player-chip--full">
+          <span class="player-chip__name"></span>
+          <span class="player-chip__value"></span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="./js/auction_room.js"></script>
+</body>
+</html>

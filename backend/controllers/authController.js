@@ -43,7 +43,7 @@ async function signup(username, email, password){
             },
             process.env.JWT_SECRET,
             {
-                expiresIn: "1h"
+                expiresIn: "1d"
             }
         );
 

@@ -52,7 +52,6 @@ router.post("/login",async(req,res) => {
 
 
 router.get("/me", authMiddleware, async (req, res) => {
-    console.log("called")
     try {
         const user = await User.findById(req.user.userId);
 

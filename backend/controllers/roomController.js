@@ -1,6 +1,6 @@
 const generateRoomCode = require("../utils/generateRoomCode");
 const Room = require("../models/room");
-const Player = require("../models/player");
+// const Player = require("../models/player");
 
 async function createRoom(req, res) {
     try {
@@ -44,6 +44,32 @@ async function createRoom(req, res) {
     }
 }
 
+async function getRoomById(req, res) {
+    try {
+        const room = await Room.findById(req.params.id)
+        .populate("hostId", "username")
+        .populate("participants.userId", "username")
+        .populate("participants.squad.player");
+
+        if (!room) {
+            return res.status(404).json({
+                message: "Room not found"
+            });
+        }
+
+        res.status(200).json({
+            room
+        });
+
+    } catch (error) {
+        console.error("GET ROOM BY ID ERROR:", error);
+
+        res.status(500).json({
+            message: error.message || "Failed to get room"
+        });
+    }
+}
+
 async function getRoom(req, res) {
     try {
         const roomCode = req.params.code.toUpperCase();
@@ -75,7 +101,6 @@ async function getRoom(req, res) {
 
 
 async function joinRoom(req, res) {
-    console.log("join riute")
     try {
         const roomCode = req.body.code?.trim().toUpperCase();
 
@@ -137,6 +162,19 @@ async function joinRoom(req, res) {
             `User ${userId} joined room ${room.code}`
         );
 
+        const io = req.app.get("io");
+
+        const updatedRoom = await Room.findOne({
+            code: room.code
+        })
+            .populate("hostId", "username")
+            .populate("participants.userId", "username");
+
+        io.to(String(room._id)).emit(
+            "room:updated",
+            updatedRoom
+        );  
+        
         res.status(200).json({
             message: "Joined room successfully",
             code: room.code
@@ -150,7 +188,6 @@ async function joinRoom(req, res) {
         });
     }
 }
-
 
 // LEAVE ROOM
 async function leaveRoom(req, res) {
@@ -211,6 +248,19 @@ async function leaveRoom(req, res) {
             `User ${userId} left room ${room.code}`
         );
 
+        const io = req.app.get("io");
+
+        const updatedRoom = await Room.findOne({
+            code: room.code
+        })
+            .populate("hostId", "username")
+            .populate("participants.userId", "username");
+
+        io.to(String(room._id)).emit(
+            "room:updated",
+            updatedRoom
+        );
+
         res.status(200).json({
             message: "Left room successfully",
             code: room.code
@@ -228,6 +278,7 @@ async function leaveRoom(req, res) {
 module.exports = {
     createRoom,
     getRoom,
+    getRoomById,
     joinRoom,
     leaveRoom
 };

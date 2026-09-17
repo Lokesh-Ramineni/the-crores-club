@@ -478,15 +478,37 @@ function registerAuctionSocket(io) {
                 currentAuction.currentBid = bidAmount;
                 currentAuction.currentBidder = userId;
 
-                if (auction.timeoutRef) {
-                    clearTimeout(auction.timeoutRef);
+                const remainingMs =
+                    currentAuction.timerEndsAt - Date.now();
+
+                const SOFT_CLOSE_THRESHOLD_MS = 10000;
+
+                if (remainingMs < SOFT_CLOSE_THRESHOLD_MS) {
+
+                    if (auction.timeoutRef) {
+                        clearTimeout(auction.timeoutRef);
+                    }
+
+                    const extensionSeconds =
+                        room.settings.bidExtension || 5;
+
+                    currentAuction.timerEndsAt =
+                        currentAuction.timerEndsAt +
+                        extensionSeconds * 1000;
+
+                    const newRemainingMs =
+                        currentAuction.timerEndsAt - Date.now();
+
+                    auction.timeoutRef = setTimeout(
+                        () => {
+                            finishCurrentPlayer(
+                                io,
+                                roomId
+                            );
+                        },
+                        newRemainingMs
+                    );
                 }
-
-                const timerSeconds =
-                    room.settings.timerPerPlayer;
-
-                currentAuction.timerEndsAt =
-                    Date.now() + timerSeconds * 1000;
 
                 io.to(String(roomId)).emit(
                     "auction:update",
@@ -502,15 +524,15 @@ function registerAuctionSocket(io) {
                 //     `💰 Bid ₹${bidAmount} by ${userId} in room ${roomId}`
                 // );
 
-                auction.timeoutRef = setTimeout(
-                    () => {
-                        finishCurrentPlayer(
-                            io,
-                            roomId
-                        );
-                    },
-                    timerSeconds * 1000
-                );
+                // auction.timeoutRef = setTimeout(
+                //     () => {
+                //         finishCurrentPlayer(
+                //             io,
+                //             roomId
+                //         );
+                //     },
+                //     timerSeconds * 1000
+                // );
 
             } catch (error) {
 

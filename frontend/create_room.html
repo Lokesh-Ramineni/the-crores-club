@@ -7,20 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/create-room.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+  <script src="./js/theme.js"></script>
 
   <div class="page">
 
-    <a href="home.html" class="back-link">&#8592; Back</a>
+    <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back</a>
 
-    <!-- Submits to /api/room/createroom. A plain HTML form submit like this
-         works with zero JS as long as the backend responds with a redirect
-         (302) to room-lobby.html?code=<ROOMCODE> once the room is created.
-         If you'd rather do this via fetch() instead (e.g. to show inline
-         validation errors), create-room.js can intercept submit, POST the
-         same fields, then do window.location.href = `room-lobby.html?code=${roomCode}`. -->
     <main class="view">
       <form class="settings-card" id="createRoomForm" action="/api/rooms/createroom" method="POST" novalidate>
 
@@ -74,7 +70,6 @@
             <div class="field-group">
                 <label class="field-group__label">Starting Purse</label>
                 
-                <!-- Inputs MUST be placed exactly here as siblings to .chip-row for your CSS rules to target them -->
                 <input type="radio" name="starting_purse" id="purse-20cr" class="chip-input" value="20cr">
                 <input type="radio" name="starting_purse" id="purse-50cr" class="chip-input" value="50Cr">
                 <input type="radio" name="starting_purse" id="purse-75cr" class="chip-input" value="75Cr">
@@ -85,7 +80,6 @@
                 <div class="chip-row">
                     <label for="purse-20cr" class="chip">₹20 cr</label>
                     <label for="purse-50cr" class="chip">₹50 Cr</label>
-                    <!-- Note: Make sure you add IDs to your CSS if you introduce new options like 75cr -->
                     <label for="purse-75cr" class="chip">₹75 Cr</label> 
                     <label for="purse-100cr" class="chip">₹100 Cr</label>
                     <label for="purse-150cr" class="chip">₹150 Cr</label>
@@ -124,7 +118,7 @@
             </div>
 
             <!-- Small bonus options — visual only, not wired to any backend yet -->
-            <details class="advanced">
+            <!-- <details class="advanced">
               <summary>Advanced options</summary>
 
               <label class="switch-row">
@@ -142,7 +136,7 @@
                   <span class="switch__track"><span class="switch__thumb"></span></span>
                 </span>
               </label>
-            </details>
+            </details> -->
 
           </div>
         </div>

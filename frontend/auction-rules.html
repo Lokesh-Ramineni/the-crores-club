@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidHouse — Auction Rules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="css/auction-rules.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+    <script src="./js/theme.js"></script>
+    <div class="page-wrap">
+        <header class="navbar">
+            <div class="navbar__brand">
+                <span class="navbar__icon">🏏</span>
+                <span class="navbar__title">AUCTION XI</span>
+            </div>
+            <div class="navbar__right">
+                <div class="settings">
+                    <input type="checkbox" id="settings-toggle" class="settings-toggle-input">
+                    <label for="settings-toggle" class="settings__trigger" title="Settings">
+                        <i class="fa-solid fa-gear"></i>
+                    </label>
+                    <div class="settings__menu">
+                        <a href="/home" class="settings__item">
+                            <span class="settings__item-icon"><i class="fa-solid fa-house"></i></span>
+                            Home
+                        </a>
+                        <a href="/players-list" class="settings__item">
+                            <span class="settings__item-icon"><i class="fa-solid fa-users"></i></span>
+                            Players List
+                        </a>
+                        <a href="#" class="settings__item settings__item--danger" onclick="logout(); return false;">
+                            <span class="settings__item-icon"  style="color: var(--danger);"><i class="fa-solid fa-right-from-bracket"></i></span>
+                            Logout
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar__right">
+                    <a href="home.html" class="navbar__back">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="rules-page">
+            <section class="rules-hero">
+                <span class="rules-hero__eyebrow">AUCTION GUIDE</span>
+                <h1>Auction Rules</h1>
+                <p>Everything you need to know before the bidding begins.</p>
+            </section>
+
+            <section class="rules-section">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">THE BASICS</span>
+                    <h2>How the Auction Works</h2>
+                </div>
+
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-card__number">01</div>
+                        <div class="step-card__icon"><i class="fa-solid fa-door-open"></i></div>
+                        <h3>Join the Room</h3>
+                        <p>Enter an auction room using the room code provided by the host.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-card__number">02</div>
+                        <div class="step-card__icon"><i class="fa-solid fa-wallet"></i></div>
+                        <h3>Get Your Budget</h3>
+                        <p>Every team starts the auction with a fixed budget to spend on players.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-card__number">03</div>
+                        <div class="step-card__icon"><i class="fa-solid fa-person-running"></i></div>
+                        <h3>Player Goes Up</h3>
+                        <p>A player is introduced with their role, country and base price.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-card__number">04</div>
+                        <div class="step-card__icon"><i class="fa-solid fa-gavel"></i></div>
+                        <h3>Start Bidding</h3>
+                        <p>Teams compete by placing bids while staying within their available budget.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <div class="step-card__number">05</div>
+                        <div class="step-card__icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>Player Sold</h3>
+                        <p>The highest valid bid wins the player and the player's price is deducted from that team's budget.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="rules-section">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">PLAY FAIR</span>
+                    <h2>Auction Rules</h2>
+                </div>
+
+                <div class="rules-grid">
+                    <article class="rule-card">
+                        <div class="rule-card__icon"><i class="fa-solid fa-people-group"></i></div>
+                        <div>
+                            <h3>Squad Rules</h3>
+                            <p>Build your squad by successfully bidding for players during the auction.</p>
+                        </div>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="rule-card__icon"><i class="fa-solid fa-arrow-up"></i></div>
+                        <div>
+                            <h3>Bidding Rules</h3>
+                            <p>Each new bid must be higher than the current highest bid.</p>
+                        </div>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="rule-card__icon"><i class="fa-solid fa-coins"></i></div>
+                        <div>
+                            <h3>Budget Rules</h3>
+                            <p>A team cannot place a bid that exceeds the amount of money available to them.</p>
+                        </div>
+                    </article>
+
+                    <article class="rule-card">
+                        <div class="rule-card__icon"><i class="fa-solid fa-user"></i></div>
+                        <div>
+                            <h3>Player Rules</h3>
+                            <p>Players can only be purchased once during an auction.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="remember-card">
+                <div class="remember-card__icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div>
+                    <span class="remember-card__eyebrow">REMEMBER</span>
+                    <h2>Spend wisely. Bid smart.</h2>
+                    <p>Once your budget is spent, you won't be able to use it again. Plan your squad before making big bids.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            © 2026 BidHouse — built for auction night.
+        </footer>
+    </div>
+
+<script src="./js/auction-rules.js"></script>
+</body>
+</html>

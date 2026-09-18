@@ -1,9 +1,8 @@
-const API_BASE_URL = "http://10.151.73.123:3000";
+const API_BASE_URL = "https://the-crores-club.onrender.com";
 
 const form = document.getElementById("joinRoomForm");
 const roomCodeInput = document.getElementById("roomCodeInput");
 const codeError = document.getElementById("codeError");
-
 
 codeError.style.display = "none";
 
@@ -14,10 +13,6 @@ if (urlCode) {
     roomCodeInput.value = urlCode.toUpperCase();
 }
 console.log("started")
-
-// ------------------------------------
-// Join room
-// ------------------------------------
 
 function isTokenExpired(token) {
     try {
@@ -33,7 +28,6 @@ function isTokenExpired(token) {
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    // Clear previous error
     codeError.style.display = "none";
 
     const token = localStorage.getItem("token");
@@ -44,13 +38,9 @@ form.addEventListener("submit", async (event) => {
         return;
     }
 
-
-    // Get room code
     const roomCode =
         roomCodeInput.value.trim().toUpperCase();
 
-
-    // Validate code
     if (!roomCode) {
         showError("Please enter a room code.");
         return;
@@ -61,8 +51,6 @@ form.addEventListener("submit", async (event) => {
         return;
     }
 
-
-    // Disable button while joining
     const submitButton =
         form.querySelector('button[type="submit"]');
 
@@ -109,11 +97,8 @@ form.addEventListener("submit", async (event) => {
             data.code
         );
 
-
-        // Go to lobby
         window.location.href =
             `/room_lobby?code=${encodeURIComponent(data.code)}`;
-
 
     } catch (error) {
 
@@ -125,11 +110,6 @@ form.addEventListener("submit", async (event) => {
         submitButton.textContent = "Join Room";
     }
 });
-
-
-// ------------------------------------
-// Show error
-// ------------------------------------
 
 function showError(message) {
 

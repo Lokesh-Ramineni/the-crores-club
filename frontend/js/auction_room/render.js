@@ -83,7 +83,6 @@ function updateBidButtons() {
     });
 
     if (passBtn) {
-        // console.log("disabled")
         passBtn.disabled =
             hasPassed ||
             isCurrentHighestBidder ||
@@ -171,7 +170,7 @@ function renderOtherPlayers() {
 
         if (isActiveBidder) {
             chipClass += " player-chip--active";
-            value = formatCrore(currentBidAmount);
+            // value = formatCrore(currentBidAmount);
         } else if (squadFull) {
             chipClass += " player-chip--full";
             value = "squad full";

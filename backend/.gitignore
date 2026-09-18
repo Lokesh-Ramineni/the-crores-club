@@ -5,7 +5,7 @@ node_modules/
 .env
 
 #DataBase Schema
-models
+# models
 
 #Player data
 seed

@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://10.151.73.123:3000";
+const API_BASE_URL = "https://the-crores-club.onrender.com";
 
 const token = localStorage.getItem("token");
 

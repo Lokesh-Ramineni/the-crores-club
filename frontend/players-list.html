@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BidHouse — Players List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/players-list.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+</head>
+
+<body>
+
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+  <script src="./js/theme.js"></script>
+
+  <div class="page-wrap">
+
+    <header class="navbar">
+
+      <div class="navbar__brand">
+        <span class="navbar__icon">🏏</span>
+        <span class="navbar__title">AUCTION XI</span>
+      </div>
+
+
+      <div class="navbar__right">
+
+        <a href="home.html" class="navbar__back">
+          <i class="fa-solid fa-arrow-left"></i>
+          Home
+        </a>
+
+      </div>
+
+    </header>
+
+    <main>
+
+      <section class="players-header">
+
+        <span class="players-header__eyebrow">
+          <i class="fa-solid fa-users"></i>
+          AUCTION XI
+        </span>
+
+        <h1 class="players-header__title">
+          Players List
+        </h1>
+
+        <p class="players-header__description">
+          Browse the players available for the auction.
+        </p>
+
+      </section>
+
+      <section class="players-section">
+
+        <div
+          class="players-grid"
+          id="playersGrid"
+        >
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      <p>
+        &copy; 2026 BidHouse — built for auction night.
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="./js/players-list.js"></script>
+
+</body>
+
+</html>

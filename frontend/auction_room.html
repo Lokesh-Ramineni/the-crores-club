@@ -16,7 +16,7 @@
   <div class="page">
 
     <header class="topbar">
-      <span class="round-info">Round <span id="roundCurrent"></span> of <span id="roundTotal">320</span></span>
+      <span class="round-info">Round <span id="roundCurrent">&mdash;</span> of <span id="roundTotal">&mdash;</span></span>
 
 
       <div class="host-controls" id="hostControls">
@@ -29,23 +29,25 @@
       </div>
     </header>
 
-    <!-- ============ CURRENT PLAYER CARD ============ -->
     <main class="auction-card">
 
       <div class="player-row">
-        <span class="player-avatar" id="playerAvatar"></span>
+        <span class="player-avatar" id="playerAvatar">&hellip;</span>
+
 
         <div class="player-info">
           <div class="player-name-row">
-            <h1 class="player-name" id="playerName"></h1>
-            <span class="tag" id="playerTag"></span>
+            <h1 class="player-name" id="playerName">Loading auction&hellip;</h1>
+            <span class="tag" id="playerTag">&mdash;</span>
+
           </div>
-          <p class="player-meta"><span id="playerRole"></span> &bull; Base <span id="playerBase"></span></p>
+          <p class="player-meta"><span id="playerRole">&mdash;</span> &bull; Base <span id="playerBase">&mdash;</span></p>
         </div>
 
         <div class="timer-box">
           <span class="timer-label">Time left</span>
-          <span class="timer-value" id="timerValue"></span>
+          <span class="timer-value" id="timerValue">--:--</span>
+
         </div>
       </div>
 
@@ -54,12 +56,12 @@
       <div class="bid-row">
         <span class="bid-label">Current bid</span>
         <span class="bid-value">
-          <span id="currentBid">4.5 cr</span>
-          <span class="bid-by">&mdash; <span id="currentBidder"></span></span>
+          <span id="currentBid">&mdash;</span>
+          <span class="bid-by">&mdash; <span id="currentBidder">No bids yet</span></span>
+
         </span>
       </div>
 
-      <!-- auction.js shows this only when the viewer isn't the current highest bidder -->
       <div class="alert alert--warning" id="outbidAlert">
         <span class="alert__icon">&#9888;</span> You've been outbid
       </div>
@@ -74,7 +76,7 @@
       <div class="stats-row">
         <div class="stat-box">
           <span class="stat-label">Your purse</span>
-          <span class="stat-value" id="yourPurse"></span>
+          <span class="stat-value" id="yourPurse">&mdash;</span>
         </div>
         <div class="stat-box">
           <span class="stat-label">Squad</span>
@@ -87,33 +89,41 @@
       </div>
     </main>
 
-    <!-- ============ OTHER PLAYERS ============ -->
     <section class="other-players">
       <h3 class="other-players__title">Other players</h3>
 
       <div class="other-players__list" id="otherPlayersList">
-        <div class="player-chip player-chip--active">
-          <span class="player-chip__name"></span>
-          <span class="player-chip__value"></span>
-        </div>
-        <div class="player-chip player-chip--passed">
-          <span class="player-chip__name"></span>
-          <span class="player-chip__value"></span>
-        </div>
-        <div class="player-chip">
-          <span class="player-chip__name"></span>
-          <span class="player-chip__value"></span>
-        </div>
-        <div class="player-chip player-chip--full">
-          <span class="player-chip__name"></span>
-          <span class="player-chip__value"></span>
-        </div>
+      </div>
+
+    </section>
+
+    <section class="my-purchases">
+      <button type="button" class="my-purchases__toggle" id="myPurchasesToggle">
+        <span>My purchases</span>
+        <span class="my-purchases__meta">
+          <span class="my-purchases__count" id="myPurchasesCount">0</span>
+          <span class="my-purchases__chevron" id="myPurchasesChevron">&#9662;</span>
+        </span>
+      </button>
+
+      <div class="my-purchases__panel" id="myPurchasesPanel" hidden>
+        <p class="my-purchases__empty" id="myPurchasesEmpty">No players purchased yet.</p>
+        <ul class="my-purchases__list" id="myPurchasesList"></ul>
       </div>
     </section>
 
   </div>
 
   <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
-    <script src="./js/auction_room.js"></script>
+  <script src="./js/auction_room/dom.js"></script>
+  <script src="./js/auction_room/utils.js"></script>
+  <script src="./js/auction_room/timer.js"></script>
+  <script src="./js/auction_room/render.js"></script>
+  <script src="./js/auction_room/bid.js"></script>
+  <script src="./js/auction_room/socket.js"></script>
+  <script src="./js/auction_room/api.js"></script>
+  <script src="./js/auction_room/host-controls.js"></script>
+  <script src="./js/auction_room/main.js"></script>
+  <script src="./js/auction_room/purchases.js"></script>
 </body>
 </html>

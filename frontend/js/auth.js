@@ -1,5 +1,4 @@
-// const API_BASE_URL = "http://localhost:3000";
-const API_BASE_URL = "http://10.151.73.123:3000";
+const API_BASE_URL = "https://the-crores-club.onrender.com";
 
 async function login(email, password) {
     const response = await fetch(

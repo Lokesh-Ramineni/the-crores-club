@@ -1,11 +1,9 @@
-// const API_BASE_URL = "http://localhost:3000";
-const API_BASE_URL = "http://10.151.73.123:3000";
+const API_BASE_URL ="https://the-crores-club.onrender.com";
 
+console.log(API_BASE_URL);
 async function getCurrentUser() {
 
     const token = localStorage.getItem("token");
-
-    console.log("2");
 
     if (!token) {
         window.location.href = "./index.html";
@@ -56,7 +54,5 @@ function logout(){
     localStorage.removeItem('token');
     window.location.href = "./index.html";
 }
-
-// function 
 
 loadHomePage();

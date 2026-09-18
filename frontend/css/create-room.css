@@ -357,7 +357,7 @@ html, body {
 .btn-primary:hover { background: var(--forest-700); }
 .btn-primary:active { transform: translateY(1px); }
 
-
+.settings-extra{ margin-top: 7px;}
 
 @media (max-width: 480px) {
   .settings-card { padding: 30px 22px 26px; }

@@ -6,6 +6,7 @@
 <title>BidHouse — Join Room</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="css/join-room.css">
 </head>
     <body>
@@ -13,16 +14,8 @@
     <script src="./js/theme.js"></script>
     <div class="page">
 
-        <a href="home.html" class="back-link">&#8592; Back</a>
+        <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back</a>
 
-        <!-- Submits to /api/room/joinroom. Works with zero JS as long as the backend
-            either responds with a redirect (302) to room-lobby.html?code=<CODE> on
-            success, or re-renders this page with an error message when the code
-            is invalid/room is full.
-            If you'd rather validate via fetch() before navigating (nicer UX —
-            no full page reload on a wrong code), join-room.js can intercept
-            submit, POST the same field, and either show #codeError inline or do
-            window.location.href = `room-lobby.html?code=${roomCode}` on success. -->
         <main class="view">
         <form class="join-card" id="joinRoomForm" action="/api/rooms/join" method="POST" novalidate>
 
@@ -48,7 +41,6 @@
                 spellcheck="false"
                 required
             >
-            <!-- Hidden until join-room.js flags an invalid/expired/full code -->
             <p class="field-error" id="codeError">Room not found. Check the code and try again.</p>
             <p class="field-hint">Codes are 6 letters and numbers, not case-sensitive.</p>
             </div>
@@ -59,9 +51,6 @@
             <a href="create_room.html" class="switch-link">Create your own room</a>
             </p>
 
-            <!-- Small bonus — visual only, not linked to any backend yet.
-                If you want this to actually prefill the code, join-room.js can
-                read ?code= from each chip's href and drop it into #roomCodeInput. -->
             <div class="recent-rooms">
             <span class="recent-rooms__label">Recently joined</span>
             <div class="recent-rooms__chips">

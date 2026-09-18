@@ -1,5 +1,3 @@
-// Countdown timer for the current player being auctioned.
-
 function startTimer(endTime, serverTime) {
     timerEndsAt = endTime;
 

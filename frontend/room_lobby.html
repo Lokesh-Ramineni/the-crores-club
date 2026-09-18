@@ -16,12 +16,6 @@
 
     <a href="home.html" class="back-link">&#8592; Leave</a>
 
-    <!-- Reached after /api/room/createroom redirects here (e.g. room-lobby.html?code=X7K9P2),
-         or after joining via a code from home.html. lobby.js should:
-         1. Read the room code from the URL / session and fetch live room state.
-         2. Fill in #roomCode, #lobbySummary, #playerList, #playerCount, #playerMax.
-         3. Keep the list live (poll or websocket) as players join/leave.
-         4. Show #startAuctionBtn enabled only for the host, once >= 2 players. -->
     <main class="view">
       <div class="lobby-card">
 
@@ -84,6 +78,11 @@
     </script>
 
     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
-    <script src="./js/lobby.js"></script>
+    <script src="./js/lobby/dom.js"></script>
+    <script src="./js/lobby/render.js"></script>
+    <script src="./js/lobby/share.js"></script>
+    <script src="./js/lobby/socket.js"></script>
+    <script src="./js/lobby/api.js"></script>
+    <script src="./js/lobby/events.js"></script>
 </body>
 </html>

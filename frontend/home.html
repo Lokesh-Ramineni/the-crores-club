@@ -13,14 +13,12 @@
 </head>
 <body>
 
-  <!-- Theme toggle checkbox (pure CSS, no JS needed to switch theme) -->
   <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
-  <!-- Settings dropdown checkbox (pure CSS popover) -->
+  <script src="./js/theme.js"></script>
   <input type="checkbox" id="settings-toggle" class="settings-toggle-input">
 
   <div class="page-wrap">
 
-    <!-- ============ NAVBAR ============ -->
     <header class="navbar">
       <div class="navbar__brand">
         <span class="navbar__icon">🏏</span>
@@ -29,7 +27,6 @@
 
       <div class="navbar__right">
 
-        <!-- Theme switch -->
         <label for="theme-toggle" class="theme-switch" title="Toggle theme">
           <span class="theme-switch__track">
             <span class="theme-switch__thumb">
@@ -39,14 +36,12 @@
           </span>
         </label>
 
-        <!-- User pill -->
         <div class="user-pill">
           <span class="user-pill__avatar" id="userAvatarInitial"></span>
           <!-- Username populated by home.js from backend session response -->
           <span class="user-pill__name" id="userName"></span>
         </div>
 
-        <!-- Settings -->
         <div class="settings">
           <label for="settings-toggle" class="settings__trigger" title="Settings">&#9881;</label>
 
@@ -56,7 +51,16 @@
               <span id="userNameMenu"></span>
             </div>
             <a href="#" class="settings__item">
-              <span class="settings__item-icon">&#9998;</span> Profile
+              <span class="settings__item-icon"><i class="fa-solid fa-pen"></i></span> Profile
+            </a>
+            <a href="/auction-rules" class="settings__item">
+                <span class="settings__item-icon"><i class="fa-solid fa-scroll"></i></span>
+                Auction Rules
+            </a>
+            <a href="/players-list" class="settings__item">
+              <!-- <span class="settings__item-icon">&#9823;</span> -->
+              <span class="settings__item-icon"><i class="fa-solid fa-users"></i></span>
+              Players List
             </a>
             <a href="#" class="settings__item settings__item--danger" onclick="logout(); return false;"> 
               <span class="settings__item-icon"  >&#8618;</span> Logout
@@ -79,13 +83,6 @@
       <p class="hero__tagline">Build. Bid. Dominate.</p>
       <p class="hero__desc">Create an auction room and challenge your friends<br>for the ultimate dream squad.</p>
 
-      <!-- home.js should wire these two up:
-           #createRoomBtn  -> navigate to create-room.html
-                              (or POST straight to /api/room/createroom if you want
-                               to skip the settings page and use defaults)
-           #joinRoomBtn    -> open a "enter room code" prompt/modal, then
-                              navigate to room-lobby.html?code=<CODE> once the
-                              backend confirms the code is valid -->
       <div class="hero__actions">
         <button type="button" class="btn-action btn-action--primary" id="createRoomBtn" onclick="window.location.href='create_room.html'">
           <span class="btn-action__icon">&#128296;</span>
@@ -99,7 +96,6 @@
       </div>
     </main>
 
-    <!-- ============ YOU CARD ============ -->
     <section class="you-section">
       <div class="you-card">
         <span class="you-card__label"><i class="fa-solid fa-user"></i>  YOU</span>
@@ -109,7 +105,6 @@
       </div>
     </section>
 
-    <!-- ============ HOW TO PLAY ============ -->
     <section class="how-section">
       <h3 class="how-section__title"><span>&#9889;</span> How to Play</h3>
 

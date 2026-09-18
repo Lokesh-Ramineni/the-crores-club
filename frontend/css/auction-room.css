@@ -192,6 +192,9 @@ html, body {
   font-size: 24px;
   color: var(--danger);
   font-variant-numeric: tabular-nums;
+  display: inline-block;
+  min-width: 64px;
+  text-align: right;
 }
 
 .divider {
@@ -500,4 +503,40 @@ html, body {
   .bid-actions { grid-template-columns: repeat(2, 1fr); }
   .stats-row { grid-template-columns: 1fr 1fr; }
   .stats-row .stat-box:last-child { grid-column: span 2; }
+}
+
+
+@media (min-width: 900px) {
+  .page {
+    width: 100%;
+    max-width: none;
+
+    padding-left: max(20px, calc((100vw - 1320px) / 2));
+    padding-right: max(20px, calc((100vw - 1320px) / 2));
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    grid-template-areas:
+      "topbar    topbar"
+      "main      sidebar"
+      "purchases purchases";
+    column-gap: 28px;
+    align-items: start;
+    align-content: start;
+  }
+
+  .topbar { grid-area: topbar; }
+  .auction-card { grid-area: main; }
+  .other-players { grid-area: sidebar; margin-top: 0; }
+  .my-purchases { grid-area: purchases; margin-top: 24px; }
+
+  .other-players__list {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+
+  .player-chip {
+    width: 100%;
+    min-width: 0;
+  }
 }

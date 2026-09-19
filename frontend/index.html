@@ -137,6 +137,30 @@
           </form>
         </section>
 
+        <section class="panel panel--otp" id="otpPanel">
+          <div class="panel-head">
+            <h2>Verify your email</h2>
+            <p>We sent a 6-digit code to <strong id="otpEmailDisplay"></strong>.</p>
+          </div>
+
+          <form id="otp-form" class="auth-form" novalidate>
+            <div class="field">
+              <label for="otp-code">Verification code</label>
+              <input type="text" id="otp-code" name="otp" placeholder="123456" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code" required>
+              <div id="otp-error" class="password-error"></div>
+            </div>
+
+            <button type="submit" class="btn-primary">Verify &amp; create account</button>
+
+            <p class="switch-text">
+              Didn't get it? <button type="button" id="resendOtpBtn" class="switch-link switch-link--button">Resend code</button>
+            </p>
+            <p class="switch-text">
+              <button type="button" id="backToSignupBtn" class="switch-link switch-link--button">Use a different email</button>
+            </p>
+          </form>
+        </section>
+
       </div>
     </main>
 

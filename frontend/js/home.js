@@ -1,4 +1,4 @@
-const API_BASEURL ="https://the-crores-club.onrender.com";
+const API_BASE_URL ="https://the-crores-club.onrender.com";
 
 async function getCurrentUser() {
 

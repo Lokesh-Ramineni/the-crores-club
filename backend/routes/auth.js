@@ -1,14 +1,34 @@
 const express = require("express");
-const { signup, login } = require("../controllers/authController");
+const { login, requestSignupOtp, verifySignupOtp } = require("../controllers/authController");
 const authMiddleware = require("../middleware/authMiddleware");
+const { otpRequestLimiter } = require("../middleware/otpRateLimit");
 const User=require("../models/User")
 const router = express.Router();
 
-router.post("/signup", async(req,res) => {
+router.post("/signup/request-otp", otpRequestLimiter, async (req, res) => {
     try{
         const {username,email,password}=req.body;
 
-        const result = await signup(username, email, password);
+        const result = await requestSignupOtp(username, email, password);
+
+        res.status(200).json({
+            message: "Verification code sent",
+            email: result.email
+        });
+
+    }catch(e){
+        res.status(400).json({
+            message: e.message
+        });
+    }
+
+});
+
+router.post("/signup/verify-otp", async (req, res) => {
+    try{
+        const {email,otp}=req.body;
+
+        const result = await verifySignupOtp(email, otp);
 
         res.status(201).json({
             message: "Signup successful",
@@ -25,7 +45,7 @@ router.post("/signup", async(req,res) => {
             message: e.message
         });
     }
-    
+
 });
 
 router.post("/login",async(req,res) => {

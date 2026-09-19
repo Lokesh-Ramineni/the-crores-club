@@ -1,6 +1,5 @@
-const API_BASE_URL ="https://the-crores-club.onrender.com";
+const API_BASEURL ="https://the-crores-club.onrender.com";
 
-console.log(API_BASE_URL);
 async function getCurrentUser() {
 
     const token = localStorage.getItem("token");

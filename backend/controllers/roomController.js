@@ -122,14 +122,12 @@ async function joinRoom(req, res) {
             });
         }
 
-        // Don't allow joining an already started/completed auction
         if (room.status !== "waiting") {
             return res.status(400).json({
                 message: "Auction has already started"
             });
         }
 
-        // Check if user is already in the room
         const alreadyJoined = room.participants.some(
             participant =>
                 String(participant.userId) === String(userId)
@@ -142,14 +140,12 @@ async function joinRoom(req, res) {
             });
         }
 
-        // Check room capacity
         if (room.participants.length >= room.settings.maxPlayers) {
             return res.status(400).json({
                 message: "Room is full"
             });
         }
 
-        // Add player
         room.participants.push({
             userId: userId,
             purseRemaining: room.settings.startingPurse,
@@ -225,10 +221,8 @@ async function leaveRoom(req, res) {
         const leavingUserIsHost =
             String(room.hostId) === String(userId);
 
-        // Remove player from participants
         room.participants.splice(participantIndex, 1);
 
-        // Nobody left -> delete room
         if (room.participants.length === 0) {
             await Room.deleteOne({ _id: room._id });
 
@@ -237,7 +231,6 @@ async function leaveRoom(req, res) {
             });
         }
 
-        // If host leaves, assign a new host
         if (leavingUserIsHost) {
             room.hostId = room.participants[0].userId;
         }

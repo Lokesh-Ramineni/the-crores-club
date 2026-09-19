@@ -8,11 +8,12 @@ const authRoutes = require("./routes/auth");
 const roomRoutes=require("./routes/room")
 const { registerAuctionSocket,liveAuctionState } = require("./sockets/auctionSocket");
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();  
 
 app.use(cors({
-    origin:[ "http://localhost:50555",
-    "http://10.151.73.123:50555"]
+    origin: process.env.FRONTEND_URL
 }));
 
 app.use(express.json());
@@ -27,10 +28,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: [
-            "http://localhost:50555",
-            "http://10.151.73.123:50555"
-        ],
+        origin: process.env.FRONTEND_URL,
         methods: ["GET", "POST"]
     }
 });
@@ -39,17 +37,9 @@ app.set("io", io);
 registerAuctionSocket(io);
 
 io.on("connection", (socket) => {
-
-    // console.log("🟢 User connected:", socket.id);
-
-
     socket.on("joinRoom", ({ roomId }) => {
 
         socket.join(roomId);
-
-        // console.log(
-        //     `🏠 ${socket.id} joined room ${roomId}`
-        // );
 
         const auction = liveAuctionState[roomId];
 
@@ -80,19 +70,9 @@ io.on("connection", (socket) => {
 
     });
 
-
-    socket.on("disconnect", () => {
-
-        // console.log(
-        //     "🔴 User disconnected:",
-        //     socket.id
-        // );
-
-    });
-
 });
 
 
-server.listen(3000, "0.0.0.0", () => {
-  console.log("Server running on port 3000");
+server.listen(PORT, "0.0.0.0", () => {
+console.log("Server running on port 3000");
 });

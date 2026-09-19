@@ -30,6 +30,9 @@ async function login(email, password) {
 
     localStorage.setItem("token", data.token);
 
+    console.log("TOKEN FROM SERVER:", data.token);
+    console.log("TOKEN SAVED:", localStorage.getItem("token"));
+
     return data;
 }
 

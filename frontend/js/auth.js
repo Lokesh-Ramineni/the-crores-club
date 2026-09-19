@@ -15,9 +15,6 @@ async function login(email, password) {
         }
     );
 
-    console.log("Status:", response.status);
-    console.log("URL:", response.url);
-
     const text = await response.text();
 
     console.log("Response:", text);
@@ -29,9 +26,6 @@ async function login(email, password) {
     }
 
     localStorage.setItem("token", data.token);
-
-    console.log("TOKEN FROM SERVER:", data.token);
-    console.log("TOKEN SAVED:", localStorage.getItem("token"));
 
     return data;
 }

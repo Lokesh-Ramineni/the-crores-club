@@ -33,11 +33,11 @@ async function login(email, password) {
     return data;
 }
 
-async function signup(username,email,password) {
-    const response=await fetch(
-        `${API_BASE_URL}/api/auth/signup`,
+async function requestSignupOtp(username, email, password) {
+    const response = await fetch(
+        `${API_BASE_URL}/api/auth/signup/request-otp`,
         {
-            method:"POST",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -47,10 +47,34 @@ async function signup(username,email,password) {
                 password
             })
         }
-    )
+    );
 
     const text = await response.text();
+    const data = JSON.parse(text);
 
+    if (!response.ok) {
+        throw new Error(data.message);
+    }
+
+    return data;
+}
+
+async function verifySignupOtp(email, otp) {
+    const response = await fetch(
+        `${API_BASE_URL}/api/auth/signup/verify-otp`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email,
+                otp
+            })
+        }
+    );
+
+    const text = await response.text();
     const data = JSON.parse(text);
 
     if (!response.ok) {

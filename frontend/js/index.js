@@ -3,6 +3,32 @@ const signupForm=document.getElementById("signup-form");
 const passwordInput = document.getElementById("signup-password");
 const passwordHint = document.getElementById("password-hint");
 
+const signupPanel = document.querySelector(".panel--signup");
+const otpPanel = document.getElementById("otpPanel");
+const otpForm = document.getElementById("otp-form");
+const otpCodeInput = document.getElementById("otp-code");
+const otpError = document.getElementById("otp-error");
+const otpEmailDisplay = document.getElementById("otpEmailDisplay");
+const resendOtpBtn = document.getElementById("resendOtpBtn");
+const backToSignupBtn = document.getElementById("backToSignupBtn");
+
+let pendingSignup = null;
+
+function showOtpPanel(email) {
+    otpEmailDisplay.textContent = email;
+    otpError.textContent = "";
+    otpCodeInput.value = "";
+    signupPanel.style.display = "none";
+    otpPanel.style.display = "block";
+    otpCodeInput.focus();
+}
+
+function showSignupPanel() {
+    otpPanel.style.display = "none";
+    signupPanel.style.display = ""; 
+    pendingSignup = null;
+}
+
 
 loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -67,17 +93,17 @@ signupForm.addEventListener("submit", async (event) => {
             throw new Error("Passwords do not match.");
         }
 
-        const data = await signup(username, email, password);
+        await requestSignupOtp(username, email, password);
 
-        console.log("Signup successful");
+        pendingSignup = { username, email, password };
 
-        window.location.href = "./home.html";
+        showOtpPanel(email);
 
     } catch (error) {
 
         console.log(error.message);
 
-        if (error.message === "Username alredy exists.") {
+        if (error.message === "Username already exists.") {
             userError.textContent = error.message;
         }
         else if (error.message === "Email already exists.") {
@@ -86,5 +112,57 @@ signupForm.addEventListener("submit", async (event) => {
         else if (error.message === "Passwords do not match.") {
             passwordError.textContent = error.message;
         }
+        else {
+            emailError.textContent = error.message;
+        }
     }
+});
+
+otpForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    otpError.textContent = "";
+
+    if (!pendingSignup) {
+        showSignupPanel();
+        return;
+    }
+
+    try {
+        await verifySignupOtp(pendingSignup.email, otpCodeInput.value.trim());
+
+        console.log("Signup successful");
+
+        window.location.href = "./home.html";
+
+    } catch (error) {
+        console.log(error.message);
+        otpError.textContent = error.message;
+    }
+});
+
+resendOtpBtn.addEventListener("click", async () => {
+    if (!pendingSignup) {
+        return;
+    }
+
+    otpError.textContent = "";
+    resendOtpBtn.disabled = true;
+    const originalText = resendOtpBtn.textContent;
+    resendOtpBtn.textContent = "Sending...";
+
+    try {
+        await requestSignupOtp(pendingSignup.username, pendingSignup.email, pendingSignup.password);
+        otpError.textContent = "A new code has been sent.";
+        otpError.classList.remove("password-error");
+    } catch (error) {
+        otpError.textContent = error.message;
+    } finally {
+        resendOtpBtn.disabled = false;
+        resendOtpBtn.textContent = originalText;
+    }
+});
+
+backToSignupBtn.addEventListener("click", () => {
+    showSignupPanel();
 });

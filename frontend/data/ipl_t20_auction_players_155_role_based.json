@@ -1,0 +1,1087 @@
+[
+  {
+    "name": "Virat Kohli",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Virat+Kohli&size=400"
+  },
+  {
+    "name": "Rohit Sharma",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rohit+Sharma&size=400"
+  },
+  {
+    "name": "Shubman Gill",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shubman+Gill&size=400"
+  },
+  {
+    "name": "Yashasvi Jaiswal",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Yashasvi+Jaiswal&size=400"
+  },
+  {
+    "name": "Suryakumar Yadav",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Suryakumar+Yadav&size=400"
+  },
+  {
+    "name": "Ruturaj Gaikwad",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ruturaj+Gaikwad&size=400"
+  },
+  {
+    "name": "Shreyas Iyer",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shreyas+Iyer&size=400"
+  },
+  {
+    "name": "KL Rahul",
+    "role": "Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=KL+Rahul&size=400"
+  },
+  {
+    "name": "Rishabh Pant",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rishabh+Pant&size=400"
+  },
+  {
+    "name": "Jos Buttler",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Jos+Buttler&size=400"
+  },
+  {
+    "name": "Heinrich Klaasen",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Heinrich+Klaasen&size=400"
+  },
+  {
+    "name": "Nicholas Pooran",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "West Indies",
+    "image": "https://ui-avatars.com/api/?name=Nicholas+Pooran&size=400"
+  },
+  {
+    "name": "Sanju Samson",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Sanju+Samson&size=400"
+  },
+  {
+    "name": "Phil Salt",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 20000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Phil+Salt&size=400"
+  },
+  {
+    "name": "Hardik Pandya",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Hardik+Pandya&size=400"
+  },
+  {
+    "name": "Ravindra Jadeja",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ravindra+Jadeja&size=400"
+  },
+  {
+    "name": "Axar Patel",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Axar+Patel&size=400"
+  },
+  {
+    "name": "Sunil Narine",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "West Indies",
+    "image": "https://ui-avatars.com/api/?name=Sunil+Narine&size=400"
+  },
+  {
+    "name": "Andre Russell",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "West Indies",
+    "image": "https://ui-avatars.com/api/?name=Andre+Russell&size=400"
+  },
+  {
+    "name": "Liam Livingstone",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Liam+Livingstone&size=400"
+  },
+  {
+    "name": "Cameron Green",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Cameron+Green&size=400"
+  },
+  {
+    "name": "Mitchell Marsh",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Mitchell+Marsh&size=400"
+  },
+  {
+    "name": "Jasprit Bumrah",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Jasprit+Bumrah&size=400"
+  },
+  {
+    "name": "Pat Cummins",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Pat+Cummins&size=400"
+  },
+  {
+    "name": "Mitchell Starc",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Mitchell+Starc&size=400"
+  },
+  {
+    "name": "Josh Hazlewood",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Josh+Hazlewood&size=400"
+  },
+  {
+    "name": "Jofra Archer",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Jofra+Archer&size=400"
+  },
+  {
+    "name": "Trent Boult",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "New Zealand",
+    "image": "https://ui-avatars.com/api/?name=Trent+Boult&size=400"
+  },
+  {
+    "name": "Kagiso Rabada",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Kagiso+Rabada&size=400"
+  },
+  {
+    "name": "Mohammed Siraj",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mohammed+Siraj&size=400"
+  },
+  {
+    "name": "Arshdeep Singh",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Arshdeep+Singh&size=400"
+  },
+  {
+    "name": "Rashid Khan",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Rashid+Khan&size=400"
+  },
+  {
+    "name": "Kuldeep Yadav",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Kuldeep+Yadav&size=400"
+  },
+  {
+    "name": "Yuzvendra Chahal",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Yuzvendra+Chahal&size=400"
+  },
+  {
+    "name": "Varun Chakravarthy",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Varun+Chakravarthy&size=400"
+  },
+  {
+    "name": "Ravichandran Ashwin",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ravichandran+Ashwin&size=400"
+  },
+  {
+    "name": "Noor Ahmad",
+    "role": "Bowler",
+    "basePrice": 20000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Noor+Ahmad&size=400"
+  },
+  {
+    "name": "Abhishek Sharma",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Abhishek+Sharma&size=400"
+  },
+  {
+    "name": "Sai Sudharsan",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Sai+Sudharsan&size=400"
+  },
+  {
+    "name": "Tilak Varma",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Tilak+Varma&size=400"
+  },
+  {
+    "name": "Riyan Parag",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Riyan+Parag&size=400"
+  },
+  {
+    "name": "Nitish Kumar Reddy",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Nitish+Kumar+Reddy&size=400"
+  },
+  {
+    "name": "Rajat Patidar",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rajat+Patidar&size=400"
+  },
+  {
+    "name": "Vaibhav Sooryavanshi",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Vaibhav+Suryavanshi&size=400"
+  },
+  {
+    "name": "Mayank Yadav",
+    "role": "All-Rounder",
+    "basePrice": 20000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mayank+Yadav&size=400"
+  },
+  {
+    "name": "Rinku Singh",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rinku+Singh&size=400"
+  },
+  {
+    "name": "Devdutt Padikkal",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Devdutt+Padikkal&size=400"
+  },
+  {
+    "name": "Shashank Singh",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shashank+Singh&size=400"
+  },
+  {
+    "name": "Nitish Rana",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Nitish+Rana&size=400"
+  },
+  {
+    "name": "Dhruv Jurel",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Dhruv+Jurel&size=400"
+  },
+  {
+    "name": "Ayush Badoni",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ayush+Badoni&size=400"
+  },
+  {
+    "name": "Rahul Tripathi",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rahul+Tripathi&size=400"
+  },
+  {
+    "name": "Karun Nair",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Karun+Nair&size=400"
+  },
+  {
+    "name": "Mayank Agarwal",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mayank+Agarwal&size=400"
+  },
+  {
+    "name": "Manish Pandey",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Manish+Pandey&size=400"
+  },
+  {
+    "name": "Travis Head",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Travis+Head&size=400"
+  },
+  {
+    "name": "David Miller",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=David+Miller&size=400"
+  },
+  {
+    "name": "Aiden Markram",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Aiden+Markram&size=400"
+  },
+  {
+    "name": "Glenn Maxwell",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Glenn+Maxwell&size=400"
+  },
+  {
+    "name": "Tim David",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Tim+David&size=400"
+  },
+  {
+    "name": "Will Jacks",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Will+Jacks&size=400"
+  },
+  {
+    "name": "Tristan Stubbs",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Tristan+Stubbs&size=400"
+  },
+  {
+    "name": "Sherfane Rutherford",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "West Indies",
+    "image": "https://ui-avatars.com/api/?name=Sherfane+Rutherford&size=400"
+  },
+  {
+    "name": "Devon Conway",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "New Zealand",
+    "image": "https://ui-avatars.com/api/?name=Devon+Conway&size=400"
+  },
+  {
+    "name": "Reeza Hendricks",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Reeza+Hendricks&size=400"
+  },
+  {
+    "name": "Ishan Kishan",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ishan+Kishan&size=400"
+  },
+  {
+    "name": "Jitesh Sharma",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Jitesh+Sharma&size=400"
+  },
+  {
+    "name": "Dhruv Jurel",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Dhruv+Jurel&size=400"
+  },
+  {
+    "name": "KS Bharat",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=K.S.+Bharat&size=400"
+  },
+  {
+    "name": "Anuj Rawat",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Anuj+Rawat&size=400"
+  },
+  {
+    "name": "Ryan Rickelton",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Ryan+Rickelton&size=400"
+  },
+  {
+    "name": "Josh Inglis",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Josh+Inglis&size=400"
+  },
+  {
+    "name": "Quinton de Kock",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Quinton+de+Kock&size=400"
+  },
+  {
+    "name": "Jonny Bairstow",
+    "role": "Wicketkeeper-Batsman",
+    "basePrice": 5000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Jonny+Bairstow&size=400"
+  },
+  {
+    "name": "Washington Sundar",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Washington+Sundar&size=400"
+  },
+  {
+    "name": "Shivam Dube",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shivam+Dube&size=400"
+  },
+  {
+    "name": "Krunal Pandya",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Krunal+Pandya&size=400"
+  },
+  {
+    "name": "Venkatesh Iyer",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Venkatesh+Iyer&size=400"
+  },
+  {
+    "name": "Shardul Thakur",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shardul+Thakur&size=400"
+  },
+  {
+    "name": "Rahul Tewatia",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rahul+Tewatia&size=400"
+  },
+  {
+    "name": "Shahrukh Khan",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shahrukh+Khan&size=400"
+  },
+  {
+    "name": "Ramandeep Singh",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ramandeep+Singh&size=400"
+  },
+  {
+    "name": "Abdul Samad",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Abdul+Samad&size=400"
+  },
+  {
+    "name": "Harpreet Brar",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Harpreet+Brar&size=400"
+  },
+  {
+    "name": "Marco Jansen",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Marco+Jansen&size=400"
+  },
+  {
+    "name": "Marcus Stoinis",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Marcus+Stoinis&size=400"
+  },
+  {
+    "name": "Wanindu Hasaranga",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "Sri Lanka",
+    "image": "https://ui-avatars.com/api/?name=Wanindu+Hasaranga&size=400"
+  },
+  {
+    "name": "Romario Shepherd",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "West Indies",
+    "image": "https://ui-avatars.com/api/?name=Romario+Shepherd&size=400"
+  },
+  {
+    "name": "Sikandar Raza",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "Zimbabwe",
+    "image": "https://ui-avatars.com/api/?name=Sikandar+Raza&size=400"
+  },
+  {
+    "name": "Azmatullah Omarzai",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Azmatullah+Omarzai&size=400"
+  },
+  {
+    "name": "Mohammed Shami",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mohammed+Shami&size=400"
+  },
+  {
+    "name": "Bhuvneshwar Kumar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Bhuvneshwar+Kumar&size=400"
+  },
+  {
+    "name": "Prasidh Krishna",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Prasidh+Krishna&size=400"
+  },
+  {
+    "name": "Harshal Patel",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Harshal+Patel&size=400"
+  },
+  {
+    "name": "Avesh Khan",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Avesh+Khan&size=400"
+  },
+  {
+    "name": "T Natarajan",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=T+Natarajan&size=400"
+  },
+  {
+    "name": "Mukesh Kumar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mukesh+Kumar&size=400"
+  },
+  {
+    "name": "Deepak Chahar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Deepak+Chahar&size=400"
+  },
+  {
+    "name": "Khaleel Ahmed",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Khaleel+Ahmed&size=400"
+  },
+  {
+    "name": "Akash Deep",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Akash+Deep&size=400"
+  },
+  {
+    "name": "Mayank Markande",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mayank+Markande&size=400"
+  },
+  {
+    "name": "Mohsin Khan",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mohsin+Khan&size=400"
+  },
+  {
+    "name": "Anrich Nortje",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Anrich+Nortje&size=400"
+  },
+  {
+    "name": "Lockie Ferguson",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "New Zealand",
+    "image": "https://ui-avatars.com/api/?name=Lockie+Ferguson&size=400"
+  },
+  {
+    "name": "Gerald Coetzee",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Gerald+Coetzee&size=400"
+  },
+  {
+    "name": "Fazalhaq Farooqi",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Fazalhaq+Farooqi&size=400"
+  },
+  {
+    "name": "Spencer Johnson",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Spencer+Johnson&size=400"
+  },
+  {
+    "name": "Nandre Burger",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Nandre+Burger&size=400"
+  },
+  {
+    "name": "Reece Topley",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "England",
+    "image": "https://ui-avatars.com/api/?name=Reece+Topley&size=400"
+  },
+  {
+    "name": "Nathan Ellis",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Nathan+Ellis&size=400"
+  },
+  {
+    "name": "Ravi Bishnoi",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ravi+Bishnoi&size=400"
+  },
+  {
+    "name": "Rahul Chahar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rahul+Chahar&size=400"
+  },
+  {
+    "name": "Suyash Sharma",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Suyash+Sharma&size=400"
+  },
+  {
+    "name": "Mayank Markande",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Mayank+Markande&size=400"
+  },
+  {
+    "name": "Manav Suthar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Manav+Suthar&size=400"
+  },
+  {
+    "name": "Piyush Chawla",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Piyush+Chawla&size=400"
+  },
+  {
+    "name": "Adam Zampa",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Australia",
+    "image": "https://ui-avatars.com/api/?name=Adam+Zampa&size=400"
+  },
+  {
+    "name": "Maheesh Theekshana",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Sri Lanka",
+    "image": "https://ui-avatars.com/api/?name=Maheesh+Theekshana&size=400"
+  },
+  {
+    "name": "Keshav Maharaj",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Keshav+Maharaj&size=400"
+  },
+  {
+    "name": "Tabraiz Shamsi",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "South Africa",
+    "image": "https://ui-avatars.com/api/?name=Tabraiz+Shamsi&size=400"
+  },
+  {
+    "name": "Mujeeb Ur Rahman",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Mujeeb+Ur+Rahman&size=400"
+  },
+  {
+    "name": "Allah Ghazanfar",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "Afghanistan",
+    "image": "https://ui-avatars.com/api/?name=Allah+Ghazanfar&size=400"
+  },
+  {
+    "name": "Ayush Mhatre",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Ayush+Mhatre&size=400"
+  },
+  {
+    "name": "Priyansh Arya",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Priyansh+Arya&size=400"
+  },
+  {
+    "name": "Angkrish Raghuvanshi",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Angkrish+Raghuvanshi&size=400"
+  },
+  {
+    "name": "Musheer Khan",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Musheer+Khan&size=400"
+  },
+  {
+    "name": "Aniket Verma",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Aniket+Verma&size=400"
+  },
+  {
+    "name": "Suryansh Shedge",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Suryansh+Shedge&size=400"
+  },
+  {
+    "name": "Swastik Chikara",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Swastik+Chikara&size=400"
+  },
+  {
+    "name": "Sameer Rizvi",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Sameer+Rizvi&size=400"
+  },
+  {
+    "name": "Vipraj Nigam",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Vipraj+Nigam&size=400"
+  },
+  {
+    "name": "Digvesh Rathi",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Digvesh+Rathi&size=400"
+  },
+  {
+    "name": "Raj Bawa",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Raj+Bawa&size=400"
+  },
+  {
+    "name": "Tanush Kotian",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Tanush+Kotian&size=400"
+  },
+  {
+    "name": "Shubham Dubey",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shubham+Dubey&size=400"
+  },
+  {
+    "name": "Harshit Rana",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Harshit+Rana&size=400"
+  },
+  {
+    "name": "Yash Dayal",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Yash+Dayal&size=400"
+  },
+  {
+    "name": "Simarjeet Singh",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Simarjeet+Singh&size=400"
+  },
+  {
+    "name": "Vaibhav Arora",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Vaibhav+Arora&size=400"
+  },
+  {
+    "name": "Rasikh Salam",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Rasikh+Salam&size=400"
+  },
+  {
+    "name": "Akash Madhwal",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Akash+Madhwal&size=400"
+  },
+  {
+    "name": "Kartik Tyagi",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Kartik+Tyagi&size=400"
+  },
+  {
+    "name": "Vignesh Puthur",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Vignesh+Puthur&size=400"
+  },
+  {
+    "name": "Manimaran Siddharth",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Manimaran+Siddharth&size=400"
+  },
+  {
+    "name": "Suyash Prabhakar Desai",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Suyash+Prabhakar+Desai&size=400"
+  },
+  {
+    "name": "Abhinav Manohar",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Abhinav+Manohar&size=400"
+  },
+  {
+    "name": "Shubham Dubey",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shubham+Dubey&size=400"
+  },
+  {
+    "name": "Prithvi Shaw",
+    "role": "Batsman",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Prithvi+Shaw&size=400"
+  },
+  {
+    "name": "Vijay Shankar",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Vijay+Shankar&size=400"
+  },
+  {
+    "name": "Shahbaz Ahmed",
+    "role": "All-Rounder",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Shahbaz+Ahmed&size=400"
+  },
+  {
+    "name": "Chetan Sakariya",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Chetan+Sakariya&size=400"
+  },
+  {
+    "name": "Navdeep Saini",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Navdeep+Saini&size=400"
+  },
+  {
+    "name": "Siddharth Kaul",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Siddharth+Kaul&size=400"
+  },
+  {
+    "name": "Varun Aaron",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Varun+Aaron&size=400"
+  },
+  {
+    "name": "Piyush Chawla",
+    "role": "Bowler",
+    "basePrice": 5000000,
+    "country": "India",
+    "image": "https://ui-avatars.com/api/?name=Piyush+Chawla&size=400"
+  }
+]

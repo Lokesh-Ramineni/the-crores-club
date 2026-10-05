@@ -1,4 +1,4 @@
-const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "891181614976-uok5j7kdhu6bodbf34c9beg8td3rss9a.apps.googleusercontent.com";
 
 const loginForm = document.getElementById("login-form");
 const signupForm=document.getElementById("signup-form");

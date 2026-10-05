@@ -181,10 +181,17 @@ function renderOtherPlayers() {
 
         const chip = document.createElement("div");
         chip.className = chipClass;
-        chip.innerHTML = `
-            <span class="player-chip__name">${name}</span>
-            <span class="player-chip__value">${value}</span>
-        `;
+
+        const nameEl = document.createElement("span");
+        nameEl.className = "player-chip__name";
+        nameEl.textContent = name;
+
+        const valueEl = document.createElement("span");
+        valueEl.className = "player-chip__value";
+        valueEl.textContent = value;
+
+        chip.appendChild(nameEl);
+        chip.appendChild(valueEl);
 
         otherPlayersList.appendChild(chip);
     });

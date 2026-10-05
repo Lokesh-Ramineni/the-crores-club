@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="https://accounts.google.com/gsi/client" async></script>
 <script src="js/auth.js" defer></script>
 <script src="js/index.js" defer></script>
 </head>
@@ -84,6 +85,10 @@
 
             <button type="submit" class="btn-primary">Log in</button>
 
+            <div class="auth-divider"><span>or</span></div>
+            <div id="googleSignInLogin" class="google-signin-slot"></div>
+            <div id="google-error-login" class="login-error"></div>
+
             <p class="switch-text">New to BidHouse?
               <label for="tab-signup" class="switch-link">Create an account</label>
             </p>
@@ -131,6 +136,10 @@
             </label> -->
 
             <button type="submit" class="btn-primary">Create account</button>
+
+            <div class="auth-divider"><span>or</span></div>
+            <div id="googleSignInSignup" class="google-signin-slot"></div>
+            <div id="google-error-signup" class="email-error"></div>
 
             <p class="switch-text">Already have an account?
               <label for="tab-login" class="switch-link">Log in</label>

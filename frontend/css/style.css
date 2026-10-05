@@ -359,6 +359,29 @@ a { color: inherit; }
 .btn-primary:hover { background: var(--forest-700); }
 .btn-primary:active { transform: translateY(1px); }
 
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 14px;
+  color: var(--ink-300);
+  font-size: 12px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line, #e4dcc8);
+}
+
+.google-signin-slot {
+  display: flex;
+  justify-content: center;
+  min-height: 40px;
+}
+
 .switch-text {
   text-align: center;
   font-size: 13px;

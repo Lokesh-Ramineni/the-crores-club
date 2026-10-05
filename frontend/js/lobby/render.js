@@ -54,21 +54,23 @@ function renderPlayers(room) {
         const li = document.createElement("li");
         li.className = "player-row";
 
-        li.innerHTML = `
-            <span class="player-row__avatar">
-                ${firstLetter}
-            </span>
+        const avatar = document.createElement("span");
+        avatar.className = "player-row__avatar";
+        avatar.textContent = firstLetter;
 
-            <span class="player-row__name">
-                ${username}
-            </span>
+        const nameEl = document.createElement("span");
+        nameEl.className = "player-row__name";
+        nameEl.textContent = username;
 
-            ${
-                isHost
-                    ? `<span class="player-row__badge">Host</span>`
-                    : ""
-            }
-        `;
+        li.appendChild(avatar);
+        li.appendChild(nameEl);
+
+        if (isHost) {
+            const badge = document.createElement("span");
+            badge.className = "player-row__badge";
+            badge.textContent = "Host";
+            li.appendChild(badge);
+        }
 
         playerList.appendChild(li);
     });

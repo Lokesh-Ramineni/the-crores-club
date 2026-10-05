@@ -13,7 +13,7 @@ async function generateUniqueUsername(displayName, email) {
     let base = (displayName || email.split("@")[0] || "player")
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "")
-        .slice(0, 20);
+        .slice(0, 18);
 
     if (!base) {
         base = "player";
@@ -24,15 +24,19 @@ async function generateUniqueUsername(displayName, email) {
 
     while (await User.findOne({ username: candidate })) {
         attempt += 1;
-        candidate = `${base}${Math.floor(1000 + Math.random() * 9000)}`;
+
+        const randomNumber = Math.floor(1000 + Math.random() * 9000);
+
+        // Reserve 4 characters for the random number
+        candidate = `${base.slice(0, 14)}${randomNumber}`;
 
         if (attempt > 10) {
-            candidate = `${base}${Date.now()}`;
+            candidate = `${base.slice(0, 10)}${Date.now().toString().slice(-8)}`;
             break;
         }
     }
 
-    return candidate;
+    return candidate.slice(0,18);
 }
 
 async function googleLogin(credential) {

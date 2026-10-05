@@ -55,7 +55,7 @@ async function loadPlayers() {
 
     try {
 
-        const response = await fetch("./data/players-list.json");
+        const response = await fetch("./data/ipl_t20_auction_players_155_role_based.json");
 
         if (!response.ok) {
             throw new Error("Failed to load players");

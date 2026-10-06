@@ -1,3 +1,5 @@
+const GOOGLE_CLIENT_ID = "891181614976-uok5j7kdhu6bodbf34c9beg8td3rss9a.apps.googleusercontent.com";
+
 const loginForm = document.getElementById("login-form");
 const signupForm=document.getElementById("signup-form");
 const passwordInput = document.getElementById("signup-password");
@@ -166,3 +168,49 @@ resendOtpBtn.addEventListener("click", async () => {
 backToSignupBtn.addEventListener("click", () => {
     showSignupPanel();
 });
+
+
+async function handleGoogleCredential(response) {
+    const isLoginTabActive = document.getElementById("tab-login").checked;
+    const errorEl = document.getElementById(
+        isLoginTabActive ? "google-error-login" : "google-error-signup"
+    );
+
+    errorEl.textContent = "";
+
+    try {
+        await googleLogin(response.credential);
+
+        console.log("Google sign-in successful");
+
+        window.location.href = "./home.html";
+
+    } catch (error) {
+        console.log(error.message);
+        errorEl.textContent = error.message;
+    }
+}
+
+function initGoogleSignIn() {
+    if (typeof google === "undefined" || !google.accounts) {
+        setTimeout(initGoogleSignIn, 200);
+        return;
+    }
+
+    google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: handleGoogleCredential
+    });
+
+    google.accounts.id.renderButton(
+        document.getElementById("googleSignInLogin"),
+        { theme: "outline", size: "large", width: 280 }
+    );
+
+    google.accounts.id.renderButton(
+        document.getElementById("googleSignInSignup"),
+        { theme: "outline", size: "large", width: 280 }
+    );
+}
+
+initGoogleSignIn();

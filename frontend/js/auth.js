@@ -30,6 +30,32 @@ async function login(email, password) {
     return data;
 }
 
+async function googleLogin(credential) {
+    const response = await fetch(
+        `${API_BASE_URL}/api/auth/google`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                credential
+            })
+        }
+    );
+
+    const text = await response.text();
+    const data = JSON.parse(text);
+
+    if (!response.ok) {
+        throw new Error(data.message);
+    }
+
+    localStorage.setItem("token", data.token);
+
+    return data;
+}
+
 async function requestSignupOtp(username, email, password) {
     const response = await fetch(
         `${API_BASE_URL}/api/auth/signup/request-otp`,

@@ -1,0 +1,6 @@
+#Folder zip
+frontend.zip
+
+#unwanted scripts
+frontend/js/auction_room.js
+frontend/js/lobby.js

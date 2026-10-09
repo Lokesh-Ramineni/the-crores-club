@@ -11,3 +11,13 @@ node_modules/
 seed
 
 curl
+
+#controller
+controllers/fc2.js
+
+#routes
+routes/fc3.js
+
+#Otp limiter
+middleware/otpRateLimit.js
+# the-crores-club/backend/middleware/otpRateLimit.js

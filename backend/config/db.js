@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const {signup,login}=require("../controllers/authController.js")
 require("dotenv").config();
 
 const uri = process.env.MONGO_URI;

@@ -1,10 +1,7 @@
 const bcrypt=require('bcrypt')
 const User = require('../models/User');
-// const PendingSignup = require('../models/PendingSignup');
 const jwt=require('jsonwebtoken')
 require("dotenv").config();
-// const { sendOtpEmail } = require("../utils/mailer");
-// const { reserveEmailSend } = require("../utils/emailQuota");
 const { OAuth2Client } = require("google-auth-library");
 
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
@@ -24,19 +21,15 @@ async function generateUniqueUsername(displayName, email) {
 
     while (await User.findOne({ username: candidate })) {
         attempt += 1;
-
-        const randomNumber = Math.floor(1000 + Math.random() * 9000);
-
-        // Reserve 4 characters for the random number
-        candidate = `${base.slice(0, 14)}${randomNumber}`;
+        candidate = `${base}${Math.floor(1000 + Math.random() * 9000)}`;
 
         if (attempt > 10) {
-            candidate = `${base.slice(0, 10)}${Date.now().toString().slice(-8)}`;
+            candidate = `${base}${Date.now()}`;
             break;
         }
     }
 
-    return candidate.slice(0,18);
+    return candidate;
 }
 
 async function googleLogin(credential) {
@@ -120,9 +113,13 @@ async function login(email,password){
         const email_registered=await User.findOne({email});
 
         if(!email_registered){
-            throw new Error("Email not found. pls siginup")
+            throw new Error("No account found for that email. Use \"Continue with Google\" to create one.")
         }
         
+        if(!email_registered.password){
+            throw new Error("This account uses Google sign-in. Please use \"Continue with Google\".")
+        }
+
         const compare=await bcrypt.compare(password,email_registered.password)
 
         if(!compare){
@@ -152,5 +149,4 @@ async function login(email,password){
     }
 }
 
-// module.exports={signup,login,requestSignupOtp,verifySignupOtp,googleLogin};
-module.exports={login,googleLogin}
+module.exports={login,googleLogin};

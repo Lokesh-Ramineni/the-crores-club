@@ -1,8 +1,6 @@
 const express = require("express");
-// const { login, requestSignupOtp, verifySignupOtp, googleLogin } = require("../controllers/authController");
 const { login, googleLogin } = require("../controllers/authController");
 const authMiddleware = require("../middleware/authMiddleware");
-// const { otpRequestLimiter } = require("../middleware/otpRateLimit");
 const User=require("../models/User")
 const router = express.Router();
 

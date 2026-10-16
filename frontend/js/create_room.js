@@ -92,7 +92,7 @@ form.addEventListener("submit", async (event) => {
       throw new Error("Room created but no room code was returned.");
     }
 
-    const lobbyUrl =`/room_lobby?code=${encodeURIComponent(roomCode)}`;
+    const lobbyUrl =`/room-lobby?code=${encodeURIComponent(roomCode)}`;
 
     console.log("Redirecting to:", lobbyUrl);
 

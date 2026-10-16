@@ -98,7 +98,7 @@ form.addEventListener("submit", async (event) => {
         );
 
         window.location.href =
-            `/room_lobby?code=${encodeURIComponent(data.code)}`;
+            `/room-lobby?code=${encodeURIComponent(data.code)}`;
 
     } catch (error) {
 

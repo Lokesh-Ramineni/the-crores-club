@@ -11,7 +11,7 @@ socket.on("auction:currentPlayer", (data) => {
     console.log("Base price:", data.player.basePrice);
     console.log("Timer ends:", data.timerEndsAt);
 
-    window.location.href = `/auction_room?roomId=${encodeURIComponent(roomId)}`;
+    window.location.href = `/auction-room?roomId=${encodeURIComponent(roomId)}`;
 });
 
 socket.on("auction:error", (data) => {

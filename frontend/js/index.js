@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", async (event) => {
         console.log("Login successful");
         console.log(data);
 
-        window.location.href = "./home";
+        window.location.href = "/home";
 
     }catch (error) {
         console.log(error.message);
@@ -36,7 +36,7 @@ async function handleGoogleCredential(response) {
 
         console.log("Google sign-in successful");
 
-        window.location.href = "./home";
+        window.location.href = "/home";
 
     } catch (error) {
         console.log(error.message);

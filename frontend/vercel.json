@@ -1,0 +1,13 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/auction-rules",
+      "destination": "/auction-rules.html"
+    },
+    {
+      "source": "/players-list",
+      "destination": "/players-list.html"
+    }
+  ]
+}

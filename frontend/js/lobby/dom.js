@@ -7,12 +7,12 @@ let roomId = null;
 
 if (!token) {
     alert("Please login first.");
-    window.location.href = "login.html";
+    window.location.href = "login";
 }
 
 if (!roomCode) {
     alert("No room code found.");
-    window.location.href = "home.html";
+    window.location.href = "home";
 }
 
 const roomCodeElement = document.getElementById("roomCode");

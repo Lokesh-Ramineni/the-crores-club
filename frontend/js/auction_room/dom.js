@@ -3,7 +3,7 @@ const API_BASE_URL = "https://the-crores-club.onrender.com";
 const token = localStorage.getItem("token");
 
 if (!token) {
-    window.location.href = "/login";
+    window.location.href = "/";
 }
 
 function getUserFromToken() {

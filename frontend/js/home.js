@@ -5,7 +5,7 @@ async function getCurrentUser() {
     const token = localStorage.getItem("token");
 
     if (!token) {
-        window.location.href = "./index.html";
+        window.location.href = "/";
         return;
     }
 
@@ -45,13 +45,13 @@ async function loadHomePage() {
         console.log("Error:", error.message);
 
         localStorage.removeItem("token");
-        window.location.href = "./index.html";
+        window.location.href = "/";
     }
 }
 
 function logout(){
     localStorage.removeItem('token');
-    window.location.href = "./index.html";
+    window.location.href = "/";
 }
 
 loadHomePage();

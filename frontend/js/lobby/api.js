@@ -20,7 +20,7 @@ async function fetchRoom() {
 
         socket.emit("joinRoom", { roomId: roomId });
     } catch (error) {
-        window.location.href = "home.html"
+        window.location.href = "home"
         console.error("Lobby error:", error);
     }
 }

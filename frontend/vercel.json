@@ -2,12 +2,36 @@
 {
   "rewrites": [
     {
-      "source": "/auction-rules",
-      "destination": "/auction-rules.html"
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/home.html"
+    },
+    {
+      "source": "/create-room",
+      "destination": "/create_room.html"
+    },
+    {
+      "source": "/join-room",
+      "destination": "/join_room.html"
+    },
+    {
+      "source": "/room-lobby",
+      "destination": "/room_lobby.html"
+    },
+    {
+      "source": "/auction-room",
+      "destination": "/auction_room.html"
     },
     {
       "source": "/players-list",
       "destination": "/players-list.html"
+    },
+    {
+      "source": "/auction-rules",
+      "destination": "/auction-rules.html"
     }
   ]
 }

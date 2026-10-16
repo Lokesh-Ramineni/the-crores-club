@@ -14,7 +14,7 @@
     <script src="./js/theme.js"></script>
     <div class="page">
 
-        <a href="home.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back</a>
+        <a href="/home" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back</a>
 
         <main class="view">
         <form class="join-card" id="joinRoomForm" action="/api/rooms/join" method="POST" novalidate>
@@ -48,14 +48,14 @@
             <button type="submit" class="btn-primary">Join Room</button>
 
             <p class="switch-text">Don't have a code?
-            <a href="create_room.html" class="switch-link">Create your own room</a>
+            <a href="/create-room" class="switch-link">Create your own room</a>
             </p>
 
             <div class="recent-rooms">
             <span class="recent-rooms__label">Recently joined</span>
             <div class="recent-rooms__chips">
-                <a href="join-room.html?code=TEAMX9" class="recent-chip">TEAMX9</a>
-                <a href="join-room.html?code=SQUAD1" class="recent-chip">SQUAD1</a>
+                <a href="join-room?code=TEAMX9" class="recent-chip">TEAMX9</a>
+                <a href="join-room?code=SQUAD1" class="recent-chip">SQUAD1</a>
             </div>
             </div>
 

@@ -12,9 +12,21 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();  
 
+// app.use(cors({
+//     origin: process.env.FRONTEND_URL
+// }));
+
+// const cors = require("cors");
+
+const allowedOrigins = [
+    process.env.FRONTEND_URL,
+    "http://localhost:8080"
+];
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL
+    origin: allowedOrigins
 }));
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 

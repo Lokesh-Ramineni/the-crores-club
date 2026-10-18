@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Secret keys and environment variables
+.env
+.env.*
+!.env.example
+
+# Git files
+.git
+.gitignore
+
+# Debug logs
+npm-debug.log*
+*.log
+
+# Local data and utilities 
+seed
+
+# Docker files
+Dockerfile
+.dockerignore

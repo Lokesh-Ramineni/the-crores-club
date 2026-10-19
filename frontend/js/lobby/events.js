@@ -25,7 +25,7 @@ leaveRoomBtn?.addEventListener("click", async () => {
         const data = await leaveRoomRequest();
 
         console.log("Left room:", data);
-        window.location.href = "/join_room";
+        window.location.href = "/join-room";
     } catch (error) {
         console.error("Leave room error:", error);
 

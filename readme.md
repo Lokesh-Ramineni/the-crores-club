@@ -131,5 +131,3 @@ to keep every client's purse/squad/other-players view in sync.
   Google. The full email-OTP flow (Resend, rate limiting, UI) is parked in
   `archive/otp-signup/` with restore steps; nothing in `backend/` or
   `frontend/` uses it
-- **Google OAuth app** — starts in Testing mode; only added test users
-  can sign in until the app is published
